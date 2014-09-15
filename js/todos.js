@@ -41,6 +41,10 @@ $(function(){
 			this.listenTo('change',this.render);
 			this.listenTo('destroy',this.remove);
 		},
+
+		render : function(){
+			this.$el.html( this.template(this.model.toJSON()) )
+		}
 		
 	})
 
