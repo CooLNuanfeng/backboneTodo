@@ -38,6 +38,8 @@ $(function(){
 			'click .toggle' : 'toggleDone',
 			'dblclick .view' : 'edit',
 			'click a.destroy' : 'clear',
+			'keypress .edit' : 'updateOK',
+			'blur .edit' : 'close'
 		},
 		initialize : function(){
 			this.listenTo('change',this.render);
@@ -50,6 +52,26 @@ $(function(){
 			this.$el.toggleClass('done',this.model.get('done'));
 			// ???
 			this.input = $('.edit');
+		},
+
+		toggleDone : function(){
+
+		},
+
+		edit : function(){
+
+		},
+
+		clear : function(){
+
+		},
+
+		updateOK : function(){
+
+		},
+
+		close : function(){
+			
 		}
 		
 	})
