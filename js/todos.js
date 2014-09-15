@@ -35,7 +35,9 @@ $(function(){
 		tagName: 'li',
 		template : _.template($('#list_template').html());
 		events: {
-
+			'click .toggle' : 'toggleDone',
+			'dblclick .view' : 'edit',
+			'click a.destroy' : 'clear',
 		},
 		initialize : function(){
 			this.listenTo('change',this.render);
@@ -43,7 +45,11 @@ $(function(){
 		},
 
 		render : function(){
-			this.$el.html( this.template(this.model.toJSON()) )
+			this.$el.html( this.template(this.model.toJSON()) );
+			//  ....
+			this.$el.toggleClass('done',this.model.get('done'));
+			// ???
+			this.input = $('.edit');
 		}
 		
 	})
