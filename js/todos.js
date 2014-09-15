@@ -64,7 +64,7 @@ $(function(){
 		},
 
 		clear : function(){
-
+			this.model.destroy();
 		},
 
 		updateOK : function(){
