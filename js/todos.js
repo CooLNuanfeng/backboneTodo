@@ -59,7 +59,8 @@ $(function(){
 		},
 
 		edit : function(){
-
+			this.$el.addClass('editing')
+			this.input.focus();
 		},
 
 		clear : function(){
