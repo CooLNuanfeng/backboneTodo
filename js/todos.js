@@ -55,7 +55,7 @@ $(function(){
 		},
 
 		toggleDone : function(){
-
+			this.model.toggleDone();
 		},
 
 		edit : function(){
@@ -71,7 +71,7 @@ $(function(){
 		},
 
 		close : function(){
-			
+
 		}
 		
 	})
